@@ -1,0 +1,17 @@
+.header_parent{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+
+}
+
+.navLinks > ul{
+    display: flex;
+    gap: 10px;
+
+}
+
+.navLinks > ul>li{
+    list-style: none;
+
+}
