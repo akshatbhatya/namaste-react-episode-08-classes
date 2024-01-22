@@ -1,12 +1,12 @@
 import React from 'react'
 import Header from './src/Header/Header'
-import ProductPage from './src/ProductPage/ProductPage'
+import { Outlet } from 'react-router'
 
 function App() {
   return (
     <div>
       <Header/>
-      <ProductPage/>
+      <Outlet/>
     </div>
   )
 }
