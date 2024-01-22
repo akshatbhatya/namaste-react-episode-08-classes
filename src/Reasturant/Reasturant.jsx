@@ -21,15 +21,11 @@ function Reasturant() {
       let response = await url.json();
       let data = response?.data?.cards;
       setProduct(data);
-      console.log(data);
     } catch (error) {
 
       console.error('Error fetching data:', error);
     }
   };
-   console.log(item);
-   console.log(product);
-
 
   return (
     <div>
