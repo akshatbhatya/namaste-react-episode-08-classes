@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 
 
@@ -6,20 +6,34 @@ import { useParams } from 'react-router'
 
 
 function Reasturant() {
-    const{resId}=useParams()
+  const { resId } = useParams()
 
-    useEffect(()=>{
-        fetchData()
-    },[])
+  let [product, setProduct] = useState([])
+  let { name, locality } = product[0]?.card?.card?.info
 
-    let fetchData=async()=>{
-        let url=await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=31.3260152&lng=75.57618289999999&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`);
-        let response=await url.json();
-        console.log(response);
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  const fetchData = async () => {
+    try {
+      let url = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=31.3260152&lng=75.57618289999999&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`);
+      let response = await url.json();
+      let data = response?.data?.cards;
+      setProduct(data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
     }
+  };
+  console.log(product[0]);
+   console.log(name);
+
+
   return (
     <div>
-      res
+      <h2>{name}</h2>
+      <h2>{locality}</h2>
+
     </div>
   )
 }
