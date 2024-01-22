@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
+import ShemerPage from '../ShemmerPage/ShemmerPage'
 
 
 
@@ -25,6 +26,10 @@ function Reasturant() {
       console.error('Error fetching data:', error);
     }
   };
+
+  if(product.length==0){
+    return <ShemerPage/>
+  }
 
   return (
     <div>
