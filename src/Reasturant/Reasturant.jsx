@@ -9,8 +9,8 @@ function Reasturant() {
   const { resId } = useParams()
 
   let [product, setProduct] = useState([])
-  let { name, locality } = product[0]?.card?.card?.info
-
+   let { name, locality,cuisines} = product[0]?.card?.card?.info || {}
+ let item=product[0]
   useEffect(() => {
     fetchData()
   }, [])
@@ -21,18 +21,25 @@ function Reasturant() {
       let response = await url.json();
       let data = response?.data?.cards;
       setProduct(data);
+      console.log(data);
     } catch (error) {
+
       console.error('Error fetching data:', error);
     }
   };
-  console.log(product[0]);
-   console.log(name);
+   console.log(item);
+   console.log(product);
 
 
   return (
     <div>
       <h2>{name}</h2>
       <h2>{locality}</h2>
+      <h3>{cuisines}</h3>
+
+      {
+        
+      }
 
     </div>
   )
