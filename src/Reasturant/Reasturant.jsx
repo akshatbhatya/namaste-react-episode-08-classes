@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react'
-import Reasturant from '../Reasturant/Reasturant'
+import { useParams } from 'react-router'
 
-function ProductDetail() {
+
+
+
+
+function Reasturant() {
     const{resId}=useParams()
 
     useEffect(()=>{
@@ -15,9 +19,9 @@ function ProductDetail() {
     }
   return (
     <div>
-
+      res
     </div>
   )
 }
 
-export default ProductDetail
+export default Reasturant
