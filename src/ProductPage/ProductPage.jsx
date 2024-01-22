@@ -1,8 +1,10 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import Product from "../Product/Product"
 import "./ProductPage.css"
 let ProductPage = () => {
     let url = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=31.62984520058017&lng=74.83495283871889&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+
+    const [product,setProduct]=useState([])
 
     useEffect(() => {
         async function fetchData() {
@@ -17,6 +19,7 @@ let ProductPage = () => {
 
             }
             console.log(allProduct);
+            setProduct(allProduct)
         }
         fetchData()
     }, [])
@@ -25,13 +28,11 @@ let ProductPage = () => {
 
     return (
         <div className="productPage_parent">
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
+           {
+            product.map((item)=>{
+                return  <Product data={item} key={item.id}/>
+            })
+           }
 
         </div>
     )
