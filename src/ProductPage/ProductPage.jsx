@@ -7,6 +7,10 @@ let ProductPage = () => {
 
     const [product, setProduct] = useState([])
 
+    const [search,setSearch]=useState("");
+
+    const [filterData,setFilterData]=useState([])
+
     useEffect(() => {
         fetchData()
     }, [])
@@ -23,6 +27,7 @@ let ProductPage = () => {
 
             }
             setProduct(allProduct)
+            setFilterData(allProduct)
 
         } catch (error) {
             console.log(error);
@@ -33,15 +38,42 @@ let ProductPage = () => {
 
 
 
+    let filterSearch=()=>{
+        let findData=product.filter((item)=>{
+            return item.name.toLowerCase().includes(search.toLocaleLowerCase())
+        })
+        if(findData.length>0){
+            setFilterData(findData)
+        }
+        else{
+            alert("not found")
+            setFilterData(product)
+            setSearch("")
+        }
+    }
+
+    let topRated=()=>{
+        let topRatedData=product.filter((item)=>item.avgRating>4.3)
+        setFilterData(topRatedData)
+    }
     return (
+
+        <>
+
+        <input type="text" placeholder="search here.." value={search} onChange={(e)=>setSearch(e.target.value)}/>
+        <button onClick={filterSearch}>search</button>
+        <button onClick={topRated}>Top Rated</button>
+        <br />
+        <br />
         <div className="productPage_parent">
             {
-                product.map((item) => {
+                filterData.map((item) => {
                     return <Link key={item.id} to={"/reasturant/" + item.id}><Product data={item} /></Link>
                 })
             }
 
         </div>
+    </>
     )
 }
 
