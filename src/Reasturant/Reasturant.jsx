@@ -9,8 +9,7 @@ function Reasturant() {
   const { resId } = useParams()
 
   let [product, setProduct] = useState([])
-   let { name, locality,cuisines} = product[0]?.card?.card?.info || {}
- let item=product[0]
+  let { name, locality, cuisines } = product[0]?.card?.card?.info || {}
   useEffect(() => {
     fetchData()
   }, [])
@@ -34,7 +33,7 @@ function Reasturant() {
       <h3>{cuisines}</h3>
 
       {
-        
+
       }
 
     </div>
