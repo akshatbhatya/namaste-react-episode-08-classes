@@ -15,7 +15,6 @@ let Product=({data})=>{
                 <h4>{locality}</h4>
                 <h4>{areaName}</h4>
                 <h4>{avgRating}</h4>
-                <h4>dvefv</h4>
             </div>
         </div>
     )
