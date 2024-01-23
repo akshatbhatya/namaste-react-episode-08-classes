@@ -22,14 +22,22 @@ class FetchDataClass extends React.Component {
 
         })
 
+        this.timer= setInterval(()=>{
+
+            console.log("timer is start");
+        },1000)
+
+        
 
     }
-   componentDidUpdate(){
-    console.log("componet updated");
+   componentDidUpdate(prevProps,setState){
+    if(this.state.data !==setState.data){
+
+    }
    }
 
    componentWillUnmount(){
-    console.log("componet is unmount");
+    clearInterval(this.timer)
    }
     render() {
 
