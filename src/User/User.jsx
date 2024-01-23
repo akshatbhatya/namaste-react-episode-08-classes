@@ -15,14 +15,20 @@ class User extends React.Component{
 
     render(){
         let {name,city}=this.props
-        let {count}=this.state
-        let {count2}=this.state
+        let {count,count2}=this.state
+
         
         return <>
 
         <h2>{name}</h2>
         <h3>count : {count}</h3>
-        <h3>count 2 :{count2}</h3>
+        <button onClick={()=>{
+            this.setState({
+                count:this.state.count+1
+    
+            })
+        }}>increase count +</button>
+        {/* <h3>count 2 :{count2}</h3> */}
         <h3>cse</h3>
         </>
     }
