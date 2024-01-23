@@ -1,5 +1,6 @@
 import React from "react"
 import UserClass from "../ClassComponents/UserClass"
+import FetchDataClass from "../fetchDataClass/FetchDataClass";
 
 class User extends React.Component{
     
@@ -40,8 +41,10 @@ console.log("parent constructor");
         {/* <h3>count 2 :{count2}</h3> */}
         <h3>cse</h3>
 
-        <UserClass name={"child component"} />
-        <UserClass name={"child component"} />
+        {/* <UserClass name={"child component"} />
+        <UserClass name={"child component"} /> */}
+
+        <FetchDataClass/>
         </>
     }
 
