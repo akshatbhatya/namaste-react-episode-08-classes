@@ -111,6 +111,9 @@
     "yallist": "^4.0.0"
   },
   "devDependencies": {
+    "buffer": "^6.0.3",
+    "events": "^3.3.0",
+    "path-browserify": "^1.0.1",
     "process": "^0.11.10"
   },
   "scripts": {

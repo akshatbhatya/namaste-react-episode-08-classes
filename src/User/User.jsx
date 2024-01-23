@@ -1,5 +1,8 @@
 import React from "react"
+import UserClass from "../ClassComponents/UserClass"
+
 class User extends React.Component{
+    
     
 
     constructor(props){
@@ -9,15 +12,21 @@ class User extends React.Component{
             count2:1,
     
         }
-
+console.log("parent constructor");
+    }
+    componentDidMount(){
+        console.log("hello from parent componentDidMount")
     }
     
 
     render(){
+
         let {name,city}=this.props
         let {count,count2}=this.state
 
         
+
+        console.log("parent render");
         return <>
 
         <h2>{name}</h2>
@@ -30,6 +39,9 @@ class User extends React.Component{
         }}>increase count +</button>
         {/* <h3>count 2 :{count2}</h3> */}
         <h3>cse</h3>
+
+        <UserClass name={"child component"} />
+        <UserClass name={"child component"} />
         </>
     }
 
