@@ -24,7 +24,13 @@ class FetchDataClass extends React.Component {
 
 
     }
+   componentDidUpdate(){
+    console.log("componet updated");
+   }
 
+   componentWillUnmount(){
+    console.log("componet is unmount");
+   }
     render() {
 
         let { name, bio, location, avatar_url } = this.state.data
