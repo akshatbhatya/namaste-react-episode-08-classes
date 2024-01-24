@@ -16,7 +16,11 @@ class User extends React.Component{
 console.log("parent constructor");
     }
     componentDidMount(){
-        console.log("hello from parent componentDidMount")
+        document.title="About Us"
+    }
+
+    componentWillUnmount(){
+        document.title="swiggy store"
     }
     
 
