@@ -1,4 +1,3 @@
-import "./Product.css"
 let Product = ({ data }) => {
 
     let cdn = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_360/"

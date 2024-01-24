@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import Product from "../Product/Product"
-import "./ProductPage.css"
 import { Link } from "react-router-dom"
 import ShemerPage from "../ShemmerPage/ShemmerPage"
 import useOnlineStatus from "../CustomHooks/useOnlineStatus"

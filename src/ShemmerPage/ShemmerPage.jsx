@@ -1,9 +1,8 @@
 import Shemmer from "../Shemmer/Sheemer"
-import "./ShemmerPage.css"
 let ShemerPage = () => {
 
     return (
-        <div className="sheemerPage">
+        <div className="flex flex-wrap gap-5 mt-16 justify-center">
         <Shemmer />
         <Shemmer />
         <Shemmer />
