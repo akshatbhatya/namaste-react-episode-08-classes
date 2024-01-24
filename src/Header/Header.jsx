@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom"
 import "./Header.css"
+import useOnlineStatus from "../CustomHooks/useOnlineStatus"
 
 
 let Header=()=>{
+    let checkStatus=useOnlineStatus()
 
     return(
         <div className="header_parent">
@@ -12,6 +14,7 @@ let Header=()=>{
 
             <div className="navLinks">
                 <ul>
+                    <li>Online Staus:{checkStatus?"🟢":"🔴"}</li>
                 <Link to='/'><li>home</li></Link>   
                     <Link to="/about"><li>about</li></Link>
                     <Link to="/contact"><li>contact</li></Link>
