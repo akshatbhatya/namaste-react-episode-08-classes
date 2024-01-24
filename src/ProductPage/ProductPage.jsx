@@ -75,7 +75,7 @@ let ProductPage = () => {
             <button onClick={topRated} className="bg-green-500 text-white px-2 rounded shadow-sm mx-2">Top Rated</button>
             <br />
             <br />
-            <div className="mx-5 mt-5">
+            <div className="mx-5 mt-5 flex-wrap">
                 {
                     filterData.map((item) => {
                         return <Link key={item.id} to={"/reasturant/" + item.id}><Product data={item} /></Link>
