@@ -17,6 +17,7 @@ let Header=()=>{
                     <li>Online Staus:{checkStatus?"🟢":"🔴"}</li>
                 <Link to='/'><li>home</li></Link>   
                     <Link to="/about"><li>about</li></Link>
+                    <Link to={"/Grosery"}><li>Grosery</li></Link>
                     <Link to="/contact"><li>contact</li></Link>
                     <Link><li>cart</li></Link>
                 </ul>

@@ -9,6 +9,7 @@ import ProductPage from "./src/ProductPage/ProductPage"
 import About from "./src/About/About"
 import Reasturant from "./src/Reasturant/Reasturant"
 import Error from "./src/Error/Error"
+import Grosery from "./src/Grosery/Grosery"
 
 
 
@@ -29,6 +30,11 @@ let componentRouter=createBrowserRouter([
             {
                 path:"/reasturant/:resId",
                 element:<Reasturant/>
+            },
+            {
+                path:"/Grosery",
+                element:<Grosery/>
+
             }
         ]
 

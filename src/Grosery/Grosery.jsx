@@ -15,4 +15,4 @@ class Grosery extends React.Component {
     }
 }
 
-export default Grosery
+export default Grosery;
