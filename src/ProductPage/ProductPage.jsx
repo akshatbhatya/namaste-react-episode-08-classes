@@ -51,7 +51,7 @@ let ProductPage = () => {
         let findData = product.filter((item) => {
             return item.name.toLowerCase().includes(search.toLocaleLowerCase())
         })
-        if (findData.length > 0 || findData==="") {
+        if (findData.length > 0) {
             setFilterData(findData)
         }
         else {
@@ -67,9 +67,10 @@ let ProductPage = () => {
     }
 
     let onhandleChange=(e)=>{
-        setSearch(e.target.value)
+        let value=e.target.value
+        setSearch(value)
         filterSearch()
-        if(search===""){
+        if(value===""){
             setFilterData(product)
         }
     }
