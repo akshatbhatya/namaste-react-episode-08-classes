@@ -22,10 +22,10 @@ class FetchDataClass extends React.Component {
 
         })
 
-        this.timer= setInterval(()=>{
+        // this.timer= setInterval(()=>{
 
-            console.log("timer is start");
-        },1000)
+        //     console.log("timer is start");
+        // },1000)
 
         
 
@@ -37,7 +37,7 @@ class FetchDataClass extends React.Component {
    }
 
    componentWillUnmount(){
-    clearInterval(this.timer)
+    // clearInterval(this.timer)
    }
     render() {
 
