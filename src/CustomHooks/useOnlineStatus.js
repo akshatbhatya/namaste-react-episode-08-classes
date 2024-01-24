@@ -5,14 +5,14 @@ function useOnlineStatus(){
     let [onlineStatus,setOnlineStatus]=useState(true)
 
     useEffect(()=>{
-        window.addEventListener(("online",()=>{
+        window.addEventListener("online",()=>{
             setOnlineStatus(true)
-        }))
+        })
 
 
-        window.addEventListener(("offline",()=>{
+        window.addEventListener("offline",()=>{
             setOnlineStatus(false)
-        }))
+        })
     },[])
 
 
