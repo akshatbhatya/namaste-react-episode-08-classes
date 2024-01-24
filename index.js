@@ -1,7 +1,7 @@
 import React from "react"
 import {RouterProvider, createBrowserRouter} from "react-router-dom"
 
-
+import { lazy,Suspense } from "react"
 
 import reactDom from "react-dom/client"
 import App from "./App"
@@ -9,8 +9,10 @@ import ProductPage from "./src/ProductPage/ProductPage"
 import About from "./src/About/About"
 import Reasturant from "./src/Reasturant/Reasturant"
 import Error from "./src/Error/Error"
-import Grosery from "./src/Grosery/Grosery"
+// import Grosery from "./src/Grosery/Grosery"
 
+
+const Grosery=lazy(()=>import("./src/Grosery/Grosery"))
 
 
 let componentRouter=createBrowserRouter([
@@ -33,7 +35,7 @@ let componentRouter=createBrowserRouter([
             },
             {
                 path:"/Grosery",
-                element:<Grosery/>
+                element:<Suspense fallback={<h1>Loading.....</h1>}><Grosery/></Suspense>
 
             }
         ]
