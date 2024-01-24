@@ -42,11 +42,7 @@ console.log("parent constructor");
     
             })
         }}>increase count +</button>
-        {/* <h3>count 2 :{count2}</h3> */}
         <h3>cse</h3>
-
-        {/* <UserClass name={"child component"} />
-        <UserClass name={"child component"} /> */}
 
         <FetchDataClass/>
         </>
