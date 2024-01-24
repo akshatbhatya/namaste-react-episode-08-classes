@@ -70,12 +70,12 @@ let ProductPage = () => {
 
         <>
 
-            <input type="text" placeholder="search here.." value={search} onChange={(e) => setSearch(e.target.value)} />
-            <button onClick={filterSearch}>search</button>
-            <button onClick={topRated}>Top Rated</button>
+            <input type="text" placeholder="search here.." value={search} onChange={(e) => setSearch(e.target.value)} className="mt-10 border border-solid border-black rounded px-2 mx-5 "/>
+            <button onClick={filterSearch} className="bg-green-500 text-white px-2 rounded shadow-sm mx-2 ">Search</button>
+            <button onClick={topRated} className="bg-green-500 text-white px-2 rounded shadow-sm mx-2">Top Rated</button>
             <br />
             <br />
-            <div className="productPage_parent">
+            <div className="mx-5 mt-5">
                 {
                     filterData.map((item) => {
                         return <Link key={item.id} to={"/reasturant/" + item.id}><Product data={item} /></Link>

@@ -7,13 +7,15 @@ let Header=()=>{
     let checkStatus=useOnlineStatus()
 
     return(
-        <div className="header_parent">
+        <div className="flex justify-between bg-slate-400 shadow-md pr-4 items-center sticky">
             <div className="logo">
-                <h3>logo</h3>
+                <img src="https://img.freepik.com/free-vector/colorful-bird-illustration-gradient_343694-1741.jpg?w=740&t=st=1706109296~exp=1706109896~hmac=ca74fe94737df48bd929c438d891c8deceaf33a12fd7e35339818af5becd05a0" className="w-16" alt="" />
+
+             
             </div>
 
             <div className="navLinks">
-                <ul>
+                <ul className="flex gap-3">
                     <li>Online Staus:{checkStatus?"🟢":"🔴"}</li>
                 <Link to='/'><li>home</li></Link>   
                     <Link to="/about"><li>about</li></Link>
