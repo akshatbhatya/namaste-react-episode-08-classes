@@ -51,7 +51,7 @@ let ProductPage = () => {
         let findData = product.filter((item) => {
             return item.name.toLowerCase().includes(search.toLocaleLowerCase())
         })
-        if (findData.length > 0) {
+        if (findData.length > 0 || findData==="") {
             setFilterData(findData)
         }
         else {
@@ -65,11 +65,18 @@ let ProductPage = () => {
         let topRatedData = product.filter((item) => item.avgRating > 4.3)
         setFilterData(topRatedData)
     }
+
+    let onhandleChange=(e)=>{
+        setSearch(e.target.value)
+        filterSearch()
+    }
+
+    // (e) => setSearch(e.target.value)
     return (
 
         <>
 
-            <input type="text" placeholder="search here.." value={search} onChange={(e) => setSearch(e.target.value)} className="mt-10 border border-solid border-black rounded px-2 mx-5  "/>
+            <input type="text" placeholder="search here.." value={search} onChange={onhandleChange} className="mt-10 border border-solid border-black rounded px-2 mx-5  "/>
             <button onClick={filterSearch} className="bg-green-500 text-white px-2 rounded shadow-sm mx-2 ">Search</button>
             <button onClick={topRated} className="bg-green-500 text-white px-2 rounded shadow-sm mx-2">Top Rated</button>
             <br />
