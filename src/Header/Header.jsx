@@ -15,12 +15,12 @@ let Header=()=>{
 
             <div className="navLinks">
                 <ul className="flex gap-3">
-                    <li>Online Staus:{checkStatus?"🟢":"🔴"}</li>
-                <Link to='/'><li>home</li></Link>   
-                    <Link to="/about"><li>about</li></Link>
-                    <Link to={"/Grosery"}><li>Grosery</li></Link>
-                    <Link to="/contact"><li>contact</li></Link>
-                    <Link><li>cart</li></Link>
+                    <li className="text-white font-medium">Online Staus : {checkStatus?"🟢":"🔴"}</li>
+                <Link to='/'><li className="text-white font-medium">Home</li></Link>   
+                    <Link to="/about"><li className="text-white font-medium">About</li></Link>
+                    <Link to={"/Grosery"}><li className="text-white font-medium">Grosery</li></Link>
+                    <Link to="/contact"><li className="text-white font-medium">Contact</li></Link>
+                    <Link><li className="text-white font-medium">Cart</li></Link>
                 </ul>
             </div>
         </div>

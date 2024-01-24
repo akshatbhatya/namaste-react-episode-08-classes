@@ -69,6 +69,9 @@ let ProductPage = () => {
     let onhandleChange=(e)=>{
         setSearch(e.target.value)
         filterSearch()
+        if(search===""){
+            setFilterData(product)
+        }
     }
 
     // (e) => setSearch(e.target.value)
@@ -77,8 +80,8 @@ let ProductPage = () => {
         <>
 
             <input type="text" placeholder="search here.." value={search} onChange={onhandleChange} className="mt-10 border border-solid border-black rounded px-2 mx-5  "/>
-            <button onClick={filterSearch} className="bg-green-500 text-white px-2 rounded shadow-sm mx-2 ">Search</button>
-            <button onClick={topRated} className="bg-green-500 text-white px-2 rounded shadow-sm mx-2">Top Rated</button>
+            <button onClick={filterSearch} className="bg-green-500 text-white px-2 rounded shadow-sm mx-2 font-medium">Search</button>
+            <button onClick={topRated} className="bg-green-500 text-white px-2 rounded shadow-sm mx-2 font-medium">Top Rated</button>
             <br />
             <br />
             <div className="mx-5 my-5 flex-wrap  gap-5 flex justify-center ">
