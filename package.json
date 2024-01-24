@@ -114,7 +114,9 @@
     "buffer": "^6.0.3",
     "events": "^3.3.0",
     "path-browserify": "^1.0.1",
-    "process": "^0.11.10"
+    "postcss": "^8.4.33",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.1"
   },
   "scripts": {
     "start": "parcel index.html",
