@@ -3,7 +3,7 @@ import { useParams } from 'react-router'
 import ShemerPage from '../ShemmerPage/ShemmerPage'
 import useResturantmenu from '../CustomHooks/UseResturantmenu'
 import { useEffect } from 'react';
-import CategoryAcc from '../../CategoryAcc/CategoryAcc';
+import CategoryAcc from "./../CategoryAcc/CategoryAcc"
 
 function Reasturant() {
 
@@ -48,8 +48,9 @@ function Reasturant() {
         <h3>{cuisines}</h3>
 
       </div>
+      <CategoryAcc/>
 
-      <CategoryAcc />
+     
     </>
   )
 }
