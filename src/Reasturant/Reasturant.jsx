@@ -48,7 +48,9 @@ function Reasturant() {
         <h3>{cuisines}</h3>
 
       </div>
-      <CategoryAcc/>
+      {
+        category.map((data)=><CategoryAcc/>)
+      }
 
      
     </>
