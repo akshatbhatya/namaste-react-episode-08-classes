@@ -34,12 +34,12 @@ function Reasturant() {
   }
 
   return (
-    <div className=' mt-20 mx-5 flex justify-center items-center flex-col'>
+    <div className=' mt-20 mx-5 inline-flex p-2 rounded justify-center  flex-col bg-[#f0f0f0] '>
 
       <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_360/${cloudinaryImageId}`} className="w-[300px] h-[300px] " alt="" />
       <h2 className='font-bold my-6'>{name}</h2>
       <h3 className={avgRating>4?"font-medium text-green-600":"font-medium text-yellow-400"}>* {avgRating}</h3>
-      <h3>{costForTwoMessage}</h3>
+      <h3 className='text-green-600'>{costForTwoMessage}</h3>
       <h3>{locality}</h3>
       <h2>{city}</h2>
       <h3>{cuisines}</h3>
