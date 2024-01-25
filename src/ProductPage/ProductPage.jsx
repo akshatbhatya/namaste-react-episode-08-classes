@@ -3,6 +3,7 @@ import Product from "../Product/Product"
 import { Link } from "react-router-dom"
 import ShemerPage from "../ShemmerPage/ShemmerPage"
 import useOnlineStatus from "../CustomHooks/useOnlineStatus"
+import { TopRated } from "../Product/Product"
 
 
 let ProductPage = () => {
@@ -16,6 +17,8 @@ let ProductPage = () => {
 
     let checkStatus=useOnlineStatus()
 
+    let TopRatedCard=TopRated(Product);
+
     useEffect(() => {
         fetchData()
     }, [])
@@ -25,6 +28,7 @@ let ProductPage = () => {
         try {
             let fetchData = await fetch(url);
             let response = await fetchData.json();
+            console.log(response);
             let result = response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
             let allProduct = []
             for (let i = 0; i < result.length; i++) {
@@ -75,6 +79,9 @@ let ProductPage = () => {
         }
     }
 
+    //  avgRating
+
+
     // (e) => setSearch(e.target.value)
     return (
 
@@ -86,10 +93,14 @@ let ProductPage = () => {
             <br />
             <br />
             <div className="mx-5 my-5 flex-wrap  gap-5 flex justify-center ">
+
+                
                 {
                     filterData.map((item) => {
-                        return <Link key={item.id} to={"/reasturant/" + item.id}><Product data={item} /></Link>
-                    })
+                         return <Link key={item.id} to={"/reasturant/" + item.id}>
+                            {item.avgRating >4.4 ?<TopRatedCard data={item}/>:<Product data={item} />}
+                         </Link>
+                    }) 
                 }
             </div>
         </>

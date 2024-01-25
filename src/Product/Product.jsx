@@ -19,5 +19,13 @@ let Product = ({ data }) => {
     )
 }
 
+export let TopRated = (Product) => {
+    return (props) => {
+        return <>
+            <label className="absolute bg-green-500 font-medium text-white rounded px-1">Top Rated</label>
+            <Product{...props} />
+        </>
+    }
+}
 
 export default Product
