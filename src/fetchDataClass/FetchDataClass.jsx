@@ -21,13 +21,7 @@ class FetchDataClass extends React.Component {
             data: response
 
         })
-
-        // this.timer= setInterval(()=>{
-
-        //     console.log("timer is start");
-        // },1000)
-
-        
+ 
 
     }
    componentDidUpdate(prevProps,setState){

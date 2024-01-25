@@ -49,7 +49,7 @@ function Reasturant() {
 
       </div>
       {
-        category.map((data)=><CategoryAcc/>)
+        category.map((data,index)=><CategoryAcc data={data} key={index}/>)
       }
 
      
