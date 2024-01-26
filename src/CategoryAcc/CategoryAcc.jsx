@@ -1,16 +1,14 @@
 import { useState } from "react";
 
-let CategoryAcc = ({ data }) => {
+let CategoryAcc = ({ data ,click,setShowIndex}) => {
 
-    const [click, setClick] = useState(false)
 
     return (
         <>
 
-            <div className="w-6/12 mx-auto mt-5 flex justify-between bg-[#f0f0f0] p-5 rounded-sm shadow-2xl cursor-pointer" onClick={()=>setClick(!click)}>
+            <div className="w-6/12 mx-auto mt-5 flex justify-between bg-[#f0f0f0] p-5 rounded-sm shadow-2xl cursor-pointer" onClick={setShowIndex}>
                 <span className="text-red-600 font-bold">{data.card.card.title} ({data.card.card.itemCards.length})</span>
-                <button className="cursor-pointer font-bold" onClick={() => setClick
-                    (!click)}>{click ? '-' : "+"}</button>
+                <button className="cursor-pointer font-bold" onClick={setShowIndex}>+</button>
             </div>
 
             <div className={click ? "w-6/12 mx-auto bg-[#f0f0f0] p-5 rounded-sm shadow-2xl mb-5" : "hidden"}>

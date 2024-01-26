@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router'
 import ShemerPage from '../ShemmerPage/ShemmerPage'
 import useResturantmenu from '../CustomHooks/UseResturantmenu'
@@ -6,6 +6,9 @@ import { useEffect } from 'react';
 import CategoryAcc from "./../CategoryAcc/CategoryAcc"
 
 function Reasturant() {
+
+  let [showIndex,setShowIndex]=useState(null)
+
 
   useEffect(() => {
     document.title = "Product-Detail"
@@ -45,7 +48,7 @@ function Reasturant() {
 
       </div>
       {
-        category.map((data,index)=><CategoryAcc data={data} key={index}/>)
+        category.map((data,index)=><CategoryAcc data={data} key={index} click={index===showIndex?true:false} setShowIndex={()=>setShowIndex(index)} />)
       }
 
     </>
