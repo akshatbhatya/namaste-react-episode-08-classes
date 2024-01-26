@@ -40,7 +40,7 @@ let CategoryAcc = ({ data }) => {
                                 alt="photo"
                             />
 
-                            <div className="absolute">
+                            <div className="absolute top-0">
                                 <button className="bg-slate-500 px-3 rounded text-white absolute">Add</button>
                             </div>
                         </div>
