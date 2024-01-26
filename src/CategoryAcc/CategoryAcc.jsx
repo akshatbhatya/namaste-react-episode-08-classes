@@ -32,13 +32,19 @@ let CategoryAcc = ({ data }) => {
                             <h4>{item?.card?.info?.category}</h4>
                         </div>
 
-                        <div className="image">
-                            <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_360/${item?.card?.info?.imageId}`} className="w-[150px] h-[150px]" alt="photo" />
 
-                            <div>
-                                <button className="bg-slate-500 px-3 rounded text-white" >Add</button>
+                        <div className="relative">
+                            <img
+                                src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_360/${item?.card?.info?.imageId}`}
+                                className="w-[150px] h-[150px]"
+                                alt="photo"
+                            />
+
+                            <div className="absolute">
+                                <button className="bg-slate-500 px-3 rounded text-white absolute">Add</button>
                             </div>
                         </div>
+
                     </div>
                     <br />
 
