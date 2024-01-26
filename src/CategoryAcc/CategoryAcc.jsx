@@ -10,7 +10,7 @@ let CategoryAcc = ({ data }) => {
     return (
         <>
 
-            <div className="w-6/12 mx-auto mt-5 flex justify-between bg-[#f0f0f0] p-5 rounded-sm shadow-2xl ">
+            <div className="w-6/12 mx-auto mt-5 flex justify-between bg-[#f0f0f0] p-5 rounded-sm shadow-2xl cursor-pointer" onClick={()=>setClick(!click)}>
                 <span className="text-red-600 font-bold">{data.card.card.title} ({data.card.card.itemCards.length})</span>
                 <button className="cursor-pointer font-bold" onClick={() => setClick
                     (!click)}>{click ? '-' : "+"}</button>
