@@ -24,7 +24,6 @@ let ShemerPage = () => {
         <Shemmer />
         <Shemmer />
         <Shemmer />
-
     </div>
     )
 

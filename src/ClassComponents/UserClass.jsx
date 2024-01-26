@@ -10,7 +10,6 @@ class UserClass extends React.Component{
     componentDidMount(){
         console.log("child is componetDid mount");
     }
-
     render(){
 
         let {name}=this.props
@@ -22,7 +21,6 @@ class UserClass extends React.Component{
             </>
         )
     }
-
 }
 
 export default UserClass;

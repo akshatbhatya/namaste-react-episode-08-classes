@@ -79,10 +79,6 @@ let ProductPage = () => {
         }
     }
 
-    //  avgRating
-
-
-    // (e) => setSearch(e.target.value)
     return (
 
         <>
@@ -93,8 +89,7 @@ let ProductPage = () => {
             <br />
             <br />
             <div className="mx-5 my-5 flex-wrap  gap-5 flex justify-center ">
-
-                
+      
                 {
                     filterData.map((item) => {
                          return <Link key={item.id} to={"/reasturant/" + item.id}>

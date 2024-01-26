@@ -1,11 +1,8 @@
 import React from "react"
-import UserClass from "../ClassComponents/UserClass"
 import FetchDataClass from "../fetchDataClass/FetchDataClass";
 
 class User extends React.Component{
     
-    
-
     constructor(props){
         super(props)
     this.state={
@@ -13,7 +10,6 @@ class User extends React.Component{
             count2:1,
     
         }
-console.log("parent constructor");
     }
     componentDidMount(){
         document.title="About Us"

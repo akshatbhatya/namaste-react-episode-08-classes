@@ -5,7 +5,7 @@ class FetchDataClass extends React.Component {
         super(props)
         this.state = {
             data: {
-                name: "a",
+                name: "default",
                 location: "punjab",
                 avatar_url: "default",
                 bio: "default"
@@ -21,9 +21,8 @@ class FetchDataClass extends React.Component {
             data: response
 
         })
- 
-
     }
+
    componentDidUpdate(prevProps,setState){
     if(this.state.data !==setState.data){
 
@@ -31,7 +30,7 @@ class FetchDataClass extends React.Component {
    }
 
    componentWillUnmount(){
-    // clearInterval(this.timer)
+    
    }
     render() {
 
@@ -48,7 +47,6 @@ class FetchDataClass extends React.Component {
             </>
         )
     }
-
 }
 
 

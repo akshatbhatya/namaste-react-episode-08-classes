@@ -2,10 +2,7 @@ import { useState } from "react";
 
 let CategoryAcc = ({ data }) => {
 
-
     const [click, setClick] = useState(false)
-
-    console.log(data);
 
     return (
         <>
@@ -20,9 +17,6 @@ let CategoryAcc = ({ data }) => {
                 {data?.card?.card?.itemCards?.map((item, index) => <div key={index} className="list-none"><>
                     <br />
 
-
-
-
                     <div className="flex justify-between items-center">
 
                         <div className="content">
@@ -31,7 +25,6 @@ let CategoryAcc = ({ data }) => {
                             <h4>RS {item?.card?.info?.defaultPrice / 100 || item?.card?.info?.price / 100}</h4>
                             <h4>{item?.card?.info?.category}</h4>
                         </div>
-
 
                         <div className="relative">
                             <img
@@ -47,17 +40,13 @@ let CategoryAcc = ({ data }) => {
 
                     </div>
                     <br />
-
-
                     <br />
                     <hr />
                 </>
                 </div>)}
             </div>
             <br />
-
         </>
-
     )
 }
 

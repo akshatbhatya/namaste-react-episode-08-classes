@@ -17,18 +17,14 @@ function Reasturant() {
   const { resId } = useParams()
 
   let product = useResturantmenu(resId);
-  console.log(product[0]);
 
   let { name, locality, cuisines, avgRating, cloudinaryImageId, city
     , costForTwoMessage
   } = product[0]?.card?.card?.info || {}
 
-
   let data = product[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards || [];
   let category = data.filter((c) => c.card.card["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
   console.log(category);
-
-
 
   if (product.length == 0) {
     return <ShemerPage />
@@ -52,7 +48,6 @@ function Reasturant() {
         category.map((data,index)=><CategoryAcc data={data} key={index}/>)
       }
 
-     
     </>
   )
 }

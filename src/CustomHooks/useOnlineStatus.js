@@ -9,13 +9,10 @@ function useOnlineStatus(){
             setOnlineStatus(true)
         })
 
-
         window.addEventListener("offline",()=>{
             setOnlineStatus(false)
         })
     },[])
-
-
 
     return onlineStatus;
 }
