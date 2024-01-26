@@ -48,7 +48,7 @@ function Reasturant() {
 
       </div>
       {
-        category.map((data,index)=><CategoryAcc data={data} key={index} click={index===showIndex?true:false} setShowIndex={()=>setShowIndex(index)} />)
+        category.map((data,index)=><CategoryAcc data={data} key={index} click={index===showIndex?true:false} setShowIndex={()=>setShowIndex(index) } />)
       }
 
     </>
