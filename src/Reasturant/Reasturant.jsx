@@ -27,7 +27,6 @@ function Reasturant() {
 
   let data = product[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards || [];
   let category = data.filter((c) => c.card.card["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
-  console.log(category);
 
   if (product.length == 0) {
     return <ShemerPage />

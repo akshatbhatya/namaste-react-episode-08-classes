@@ -4,6 +4,10 @@ import { createSlice } from "@reduxjs/toolkit";
 let initialState={
 
     items:[
+       {
+        name:"Akshat",
+        class:"cse"
+       }
 
     ]
     
@@ -17,7 +21,7 @@ let cartSlice=createSlice({
    reducers:{
 
     addItem:(state,action)=>{
-        state.items= state.items.push(action.payload)
+         state.items.push(action.payload)
         },
         removeItem:(state,action)=>{
             state.items=state.items.filter((item)=>item.id!==action.payload)

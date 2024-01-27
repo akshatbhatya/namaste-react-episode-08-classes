@@ -16,7 +16,6 @@ class FetchDataClass extends React.Component {
 
         let data = await fetch("https://api.github.com/users/akshatbhatya")
         let response = await data.json()
-        console.log(response);
         this.setState({
             data: response
 
@@ -35,7 +34,6 @@ class FetchDataClass extends React.Component {
     render() {
 
         let { name, bio, location, avatar_url } = this.state.data
-        console.log(this.state.data);
         return (
             <>
                 <img src={avatar_url} alt={name} />

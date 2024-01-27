@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useDispatch } from "react-redux"
+import { addItem } from "../Utils/storeSlice"
 
 let CategoryAcc = ({ data ,click,setShowIndex}) => {
+
+    let dispatch =useDispatch()
 
 
     return (
@@ -14,7 +17,7 @@ let CategoryAcc = ({ data ,click,setShowIndex}) => {
             <div className={click ? "w-6/12 mx-auto bg-[#f0f0f0] p-5 rounded-sm shadow-2xl mb-5" : "hidden"}>
                 {data?.card?.card?.itemCards?.map((item, index) => <div key={index} className="list-none"><>
                     <br />
-
+                  
                     <div className="flex justify-between items-center">
 
                         <div className="content">
@@ -22,6 +25,7 @@ let CategoryAcc = ({ data ,click,setShowIndex}) => {
                             <h4>{item?.card?.info?.description}</h4>
                             <h4>RS {item?.card?.info?.defaultPrice / 100 || item?.card?.info?.price / 100}</h4>
                             <h4>{item?.card?.info?.category}</h4>
+                           
                         </div>
 
                         <div className="relative">
@@ -32,7 +36,7 @@ let CategoryAcc = ({ data ,click,setShowIndex}) => {
                             />
 
                             <div className="absolute top-0">
-                                <button className="bg-slate-500 px-3 rounded text-white absolute">Add</button>
+                                <button className="bg-slate-500 px-3 rounded text-white absolute" onClick={()=>dispatch(addItem(item.card.info))}>Add</button>
                             </div>
                         </div>
 

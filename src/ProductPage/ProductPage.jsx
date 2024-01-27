@@ -28,7 +28,6 @@ let ProductPage = () => {
         try {
             let fetchData = await fetch(url);
             let response = await fetchData.json();
-            console.log(response);
             let result = response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
             let allProduct = []
             for (let i = 0; i < result.length; i++) {
