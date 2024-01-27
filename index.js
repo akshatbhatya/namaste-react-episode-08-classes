@@ -8,6 +8,7 @@ import App from "./App"
 import ProductPage from "./src/ProductPage/ProductPage"
 import Reasturant from "./src/Reasturant/Reasturant"
 import Error from "./src/Error/Error"
+import Cart from "./src/Cart/Cart"
 // import Grosery from "./src/Grosery/Grosery"
 
 let About=lazy(()=>import("./src/About/About"))
@@ -36,6 +37,10 @@ let componentRouter=createBrowserRouter([
                 path:"/Grosery",
                 element:<Suspense fallback={<h1>Loading.....</h1>}><Grosery/></Suspense>
 
+            },
+            {
+                path:"/cart",
+                element:<Cart/>
             }
         ]
 
