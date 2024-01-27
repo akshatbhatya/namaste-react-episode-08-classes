@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "learn classes",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.1.0",
     "abortcontroller-polyfill": "^1.7.5",
     "ansi-regex": "^5.0.1",
     "ansi-styles": "^4.3.0",
