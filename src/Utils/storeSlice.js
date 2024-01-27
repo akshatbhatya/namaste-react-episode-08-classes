@@ -4,10 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 let initialState={
 
     items:[
-       {
-        name:"Akshat",
-        class:"cse"
-       }
+       
 
     ]
     
