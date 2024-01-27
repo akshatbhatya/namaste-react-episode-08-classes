@@ -8,11 +8,11 @@ let Cart = () => {
     console.log(data);
     let dispatch = useDispatch()
 
-    if (data.length === 0) return <h2>cart is empty</h2>
+    if (data.length === 0) return <h1 className="mt-10 text-center">Cart Is Empty</h1>
     return (
         <>
 
-        <button onClick={()=>dispatch(clearItem())}>Empty Cart</button>
+        <button onClick={()=>dispatch(clearItem())} className="bg-[black] text-white text-center px-3 py-1 rounded-sm">Empty Cart</button>
 
             {data?.map((data) => {
 

@@ -24,7 +24,7 @@ let cartSlice=createSlice({
             state.items=state.items.filter((item)=>item.id!==action.payload)
         },
         clearItem:(state)=>{
-            state.items=state.items.length=0;
+            state.items.length=0;
         }
    
 
