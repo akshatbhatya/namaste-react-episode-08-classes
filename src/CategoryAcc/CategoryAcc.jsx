@@ -20,7 +20,7 @@ let CategoryAcc = ({ data ,click,setShowIndex}) => {
                   
                     <div className="flex justify-between items-center">
 
-                        <div className="content">
+                        <div className="content w-3/5">
                             <h4>{item?.card?.info?.name}</h4>
                             <h4>{item?.card?.info?.description}</h4>
                             <h4>RS {item?.card?.info?.defaultPrice / 100 || item?.card?.info?.price / 100}</h4>
