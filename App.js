@@ -12,7 +12,7 @@ function App() {
       <Provider store={store}>
 
       <Header/>
-      <Forms/>
+      {/* <Forms/> */}
       <Outlet/>
       </Provider>
     </div>
